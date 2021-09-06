@@ -34,11 +34,20 @@ nav {
    margin-right: 10vw;
 }
 
+/* .popclass:hover ~ .popclass:after {
+    content: attr(data-content);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgb(194, 194, 194) 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
+
+
 .text-reflect {
     position: relative;
     display: inline-block;
     font-size: 24px;
   }
+  
   .text-reflect:after,
  .text-reflect:before {
     position: absolute;
@@ -49,6 +58,8 @@ nav {
     transform: scaleY(-1.1);
     transform-origin: bottom;
   }
+
+
   .text-reflect:after {
     content: attr(data-content);
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgb(39, 39, 39) 90%);
