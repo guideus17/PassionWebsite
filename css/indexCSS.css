@@ -34,40 +34,49 @@ nav {
    margin-right: 10vw;
 }
 
-/* .popclass:hover ~ .popclass:after {
+.text-reflect:hover::after{
     content: attr(data-content);
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgb(194, 194, 194) 90%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgb(75, 75, 75) 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;    
+}
+
+.text-reflect:hover {
+    font-size: 28px;
+  }
+
+.text-reflect:after {
+    content: attr(data-content);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgb(48, 48, 48) 90%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-} */
-
+  }
 
 .text-reflect {
+    cursor: pointer;
     position: relative;
     display: inline-block;
     font-size: 24px;
+    transition: 0.2s;
   }
   
   .text-reflect:after,
  .text-reflect:before {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    bottom: 2px;
+    top: 60px;
     left: 0px;
     transform: scaleY(-1.1);
-    transform-origin: bottom;
+    transform-origin: top;
   }
 
 
-  .text-reflect:after {
-    content: attr(data-content);
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgb(39, 39, 39) 90%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+
+ 
+
 
 /* ---------------------------template---------------------------- */
+
+
 
 .songcover {
     position: relative;
@@ -76,11 +85,13 @@ nav {
 .coverfilter {
     position: absolute;
     z-index: 10;
+    width: 100%;
 }
 
 .songcoverimg {
     box-shadow: 0px 3px 10px rgb(26, 26, 26);
     z-index: 5;
+    width: 100%;
 }
 
 h2 {
@@ -102,3 +113,14 @@ h1 {
 .coverfilter:hover {
     display: none;
 }
+
+/* ---------------------------grid on the main ---------------------------- */
+
+main {
+    margin-top: 70px;
+    gap: 3vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(20vw, 1fr));
+    margin-left: 10vw;
+   margin-right: 10vw;
+  }
