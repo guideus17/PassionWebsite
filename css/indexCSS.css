@@ -74,7 +74,7 @@ nav {
 
 .songcover {
   position: relative;
-  cursor: pointer;
+
 }
 
 .coverfilter {
@@ -116,6 +116,7 @@ h1 {
 
 .coverfilter {
   pointer-events: none;
+  opacity: 60%;
 }
 
 .songcover:hover > .coverfilter {
@@ -141,4 +142,207 @@ main {
   grid-template-columns: repeat(4, minmax(10vw, 1fr));
   margin-left: 17vw;
   margin-right: 17vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------MOBILE ---------------------------- */
+
+
+@media only screen and (max-width: 1125px) {
+ 
+ header {
+  position: absolute;
+  z-index: 10;
+  right: 0;
+ }
+
+  header img {
+    display: block;
+    margin-left: 0vw;
+    margin-right: 7vw;
+    width: 50px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+
+  main {
+    margin-top: 50px;
+    grid-template-columns: repeat(2, minmax(10vw, 1fr));
+    margin-left: 7vw;
+  margin-right: 7vw;
+  }
+  
+  nav {
+    color: white;
+    font-family: Arial Rounded MT;
+    font-size: 27px;
+    display: grid;
+    justify-content: left;
+    grid-template-rows: repeat(6,1fr);
+    margin-left: 0vw;
+    margin-right: 0vw;
+    margin-top: 20px;
+    position: fixed;
+    left: -1500px;
+    z-index: 17;
+    background-color: #111111;
+    padding: 20px;
+    height: 300px;
+    width: 100%;
+    padding-left: 7vw;
+    padding-top: 37px;
+    transition: 0.2s;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  .showup {
+    left: 0px;
+  }
+
+  
+
+ 
+
+  .text-reflect:after,
+  .text-reflect:before {
+    display: none;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  label{
+    display:flex;
+     flex-direction:column;
+     width:38px;
+     cursor:pointer;
+     position: relative;
+     z-index: 25;
+     margin-left: 7vw;
+     margin-top: 20px;
+     
+   }
+   
+   label span{
+     background: #fff;
+     border-radius:10px;
+     height:5px;
+     margin: 4px 0;
+     transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+   
+   }
+   
+   
+   span:nth-of-type(1){
+     width:50%;
+     
+   }
+   
+   span:nth-of-type(2){
+     width:100%;
+   }
+   
+   
+   span:nth-of-type(3){
+     width:75%;
+    
+   }
+   
+   
+
+   
+   .oneactive {
+     transform-origin:bottom;
+     transform:rotatez(45deg) translate(8px,0px)
+   }
+   
+   
+   .twoactive {
+     
+     transform-origin:top;
+     transform:rotatez(-45deg)
+   }
+   
+   
+   .threeactive {
+     
+     transform-origin:bottom;
+     width:50%;
+     transform: translate(11px,-10px) rotatez(45deg);
+   
+   }
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
