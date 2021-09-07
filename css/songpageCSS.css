@@ -3,25 +3,142 @@
 /* ---------------------------header / body---------------------------- */
 header img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   width: 72px;
-  margin-top: 45px;
-  margin-bottom: 45px;
   position: relative;
-  z-index: 10;
+  z-index: 12;
 }
 
+header {
+  position: relative;
+  z-index: 12;
+display: flex;
+justify-content: space-between;
+margin-left: 7vw;
+margin-right: 7vw;
+margin-top: 45px;
+}
 
+header a {
+  text-decoration: none;
+  color: white;
+  font-family: Arial Rounded MT;
+  font-size: 23px;
+  align-self: center;
+}
 
 
 /* ---------------------------grid on the main ---------------------------- */
 
 main {
+
   margin-top: 100px;
-  gap: 4vw;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(10vw, 1fr));
   margin-left: 17vw;
   margin-right: 17vw;
+  position: relative;
+  z-index: 12;
+  display: grid;
+  grid-template-columns: 20vw 1fr;
+    grid-template-rows: 1fr 1fr 1fr 80px;
+    grid-template-areas: "left right1" 
+                         "left right2"
+                         "left right3"
+                         "left right4";
+  height: 20vw;
+  gap: 20px;
+  overflow: hidden;
+}
+
+
+
+/* ---------------------------main content ---------------------------- */
+
+#images {
+  grid-area: left;
+
+}
+
+#imgtop {
+  position: absolute;
+  z-index: 20;
+  height: 100%;
+  box-shadow: 0px 5px 20px rgb(26, 26, 26);
+}
+
+
+#imgblur {
+  position: relative;
+  z-index: 11;
+  right: -250px;
+  height: 100%;
+  filter: blur(90px);
+  -webkit-filter: blur(90px);
+  opacity: 50%;
+}
+
+#info {
+  position: relative;
+  z-index: 12;
+  color: white;
+  font-family: Montserrat;
+}
+
+h1 {
+  grid-area: right1;
+  position: relative;
+  z-index: 12;
+  color: white;
+  font-family: Montserrat;
+font-weight: bold;
+font-size: 45px;
+}
+
+#artistalbumyear {
+  grid-area: right2;
+  position: relative;
+  z-index: 12;
+  color: white;
+  font-family: Montserrat;
+}
+
+h2 {
+  grid-area: right2;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+h3 {
+  grid-area: right2;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+#year {
+  grid-area: right2;
+}
+
+#genre {
+  grid-area: right3;
+  position: relative;
+  z-index: 12;
+  color: white;
+  font-family: Montserrat;
+}
+
+
+p {
+  font-size: 15px;
+}
+
+
+
+iframe {
+  grid-area: right4;
+  position: relative;
+  z-index: 12;
+  opacity: 30%;
+  transition: 0.2s;
+}
+
+iframe:hover {
+  opacity: 100%;
 }
