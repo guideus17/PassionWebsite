@@ -1,11 +1,7 @@
     const urlParams = new URLSearchParams(window.location.search);
     const idselection = urlParams.get("song");
 
-    const url = "https://songs-9c7e.restdb.io/rest/music/" + idselection + "?apikey=61376b4343cedb6d1f97edd7&fbclid=IwAR3DWWlYBChPoMgWHarnMM3sutmEnB3FE0xyhtaoRAjfq2FrR0IUQfHtVCY";
-
-
-
-
+    const url = "https://group-f263.restdb.io/rest/oursongs/" + idselection + "?apikey=6138a75043cedb6d1f97ee5b&fbclid=IwAR3DWWlYBChPoMgWHarnMM3sutmEnB3FE0xyhtaoRAjfq2FrR0IUQfHtVCY";
 
 
     fetch(url)
@@ -25,8 +21,6 @@
 
         document.querySelector("#imgtop").src = song.img;
         document.querySelector("#imgblur").src = song.img;
-        // document.querySelector("h1").textContent=product.productdisplayname;
-        // document.querySelector(".productname").textContent=product.productdisplayname;
 
-
+        document.querySelector("iframe").src = song.video;
     }

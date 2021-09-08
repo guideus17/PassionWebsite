@@ -1,0 +1,57 @@
+.folkclass {
+
+  color: white;
+  font-size: 80px;
+  font-family: Arial Rounded MT;
+  margin-top: -30px;
+}
+
+.folkclass:hover {
+  font-size: 80px;
+  margin-top: -25px;
+}
+
+.folkclass:after {
+  content: attr(data-content);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 20%,
+ rgb(82, 82, 82) 90%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0%;
+}
+
+.folkclass:hover::after {
+  content: attr(data-content);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 20%,
+rgb(82, 82, 82) 90%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0%;
+}
+
+
+@media only screen and (max-width: 1125px) { 
+
+  .folkclass {
+
+    color: white;
+    font-size: 45px;
+    font-family: Arial Rounded MT;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+  
+  .folkclass:hover {
+    font-size: 45px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+
+
+}

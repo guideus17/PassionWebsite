@@ -1,4 +1,8 @@
-const url = "https://group-f263.restdb.io/rest/oursongs";
+
+
+const url = `https://group-f263.restdb.io/rest/oursongs?apikey=6138a75043cedb6d1f97ee5b&q={"genre":{"$in":["Pop"]}}`;
+
+
 
 const options = {
     headers: {
@@ -60,13 +64,6 @@ function showsongs(song) {
 
 
 };
-
-
-
-
-
-
-
 
 
 
