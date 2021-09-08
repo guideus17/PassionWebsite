@@ -1,6 +1,6 @@
 
 
-const url = `https://group-f263.restdb.io/rest/oursongs?apikey=6138a75043cedb6d1f97ee5b&q={"genre":{"$in":["R&B"]}}`;
+const url = `https://group-f263.restdb.io/rest/oursongs?apikey=6138a75043cedb6d1f97ee5b&q={"genre":{"$in":["R'n'B"]}}`;
 
 
 

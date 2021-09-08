@@ -89,13 +89,6 @@ nav a {
   transition: 0.2s;
 }
 
-.songcoverimg {
-  box-shadow: 0px 3px 10px rgb(26, 26, 26);
-  z-index: 14;
-  width: 100%;
-  transition: 0.2s;
-  position: relative;
-}
 
 h2 {
   color: white;
@@ -129,9 +122,20 @@ h1 {
   width: 102%;
 }
 
-.songcover:hover > .songcoverimg {
+.songcoverimg {
+  box-shadow: 0px 3px 10px rgb(26, 26, 26);
+  z-index: 14;
+  width: 100%;
+  transition: 0.2s;
+  position: relative;
+}
+
+
+.songcoverimg:hover{
   width: 102%;
 }
+
+
 
 .songcover:hover ~ h2,
 h1 {
@@ -147,6 +151,7 @@ main {
   grid-template-columns: repeat(4, minmax(10vw, 1fr));
   margin-left: 17vw;
   margin-right: 17vw;
+  margin-bottom: 100px;
 }
 
 

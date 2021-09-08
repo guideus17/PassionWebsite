@@ -1,4 +1,8 @@
-const url = "https://group-f263.restdb.io/rest/oursongs";
+const urlParams = new URLSearchParams(window.location.search);
+const artistselection = urlParams.get("artist");
+
+const url = 'https://group-f263.restdb.io/rest/oursongs?q={"artist": "' + artistselection + '"}';
+
 
 const options = {
     headers: {
@@ -26,8 +30,7 @@ fetch(url, options)
 
 
 function handData(data) {
-
-
+   
     data.forEach(showsongs);
 }
 
@@ -35,6 +38,16 @@ function handData(data) {
 // -------------------------------------Clone template and put it in place---------------------------------
 
 function showsongs(song) {
+
+
+
+    document.querySelector("#artistphoto").src = `${song.portrait}`;
+    document.querySelector("#imgblur").src = `${song.portrait}`;
+    document.querySelector("h3").textContent = `${song.artist}`;
+
+
+
+
     // grab template and cloone it
     const templateSelection = document.querySelector(".allsongs").content;
     const cloneOfTemplate = templateSelection.cloneNode(true);
@@ -53,7 +66,7 @@ function showsongs(song) {
 
 
     // put clone in the place
-    const GridWithsongs = document.querySelector("main");
+    const GridWithsongs = document.querySelector(".songslist");
     GridWithsongs.appendChild(cloneOfTemplate);
 
 
@@ -65,20 +78,3 @@ function showsongs(song) {
 
 
 
-
-
-
-document.querySelector("#hamb").addEventListener("click", hambani)
-
-
-
-
-function hambani() {
-
-    console.log("open");
-    document.querySelector("nav").classList.toggle("showup");
-
-    document.querySelector("#one").classList.toggle("oneactive");
-    document.querySelector("#two").classList.toggle("twoactive");
-    document.querySelector("#three").classList.toggle("threeactive");
-}

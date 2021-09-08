@@ -7,33 +7,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Motif, website to find songs">
     <title>Motif</title>
-    <link rel="stylesheet" href="css/indexCSS.css">
+    <link rel="stylesheet" href="css/artistpage.css">
     <link rel="stylesheet" href="css/default.css">
-    <link rel="stylesheet" href="css/pop.css">
 </head>
 
 <body>
 
     <header>
-        <a href="index.html"><img src="assets/logo.png" alt="Motif"></a>
+        <a id="logo" href="index.html"><img src="assets/logo.png" alt="Motif"></a>
+        <a id="genres" href="index.html">Genres</a>
     </header>
 
-    <label id="hamb" for="check">
-        <span id="one"></span>
-        <span id="two"></span>
-        <span id="three"></span>
-    </label>
 
-    <nav> 
+
+    <nav>
         <a href="pop.html" class="text-reflect popclass" data-content="Pop">Pop</a>
         <a href="rock.html" class="text-reflect rockclass" data-content="Rock">Rock</a>
-        <a href="rnb.html" class="text-reflect rnbclass" data-content="R'n'B">R'n'B</a>
+        <a href="rnb.html" class="text-reflect rnbclass" data-content="R&B">R&B</a>
         <a href="alternative.html" class="text-reflect alternativeclass" data-content="Alternative">Alternative</a>
         <a href="indie.html" class="text-reflect indieclass" data-content="Indie">Indie</a>
         <a href="folk.html" class="text-reflect folkclass" data-content="Folk">Folk</a>
     </nav>
 
     <main>
+
+        <div class="artisttop">
+            <div id="images">
+                <div id="imgtop">
+                    <img id="artistphoto" src="#" alt="Song Cover">
+                </div>
+              <img id="imgblur" src="#" alt="Song Cover">  
+              </div>
+              
+              <h3></h3>
+            </div>
+
+
+        <section class="songslist"></section>
     </main>
 
 
@@ -41,7 +51,6 @@
 
     <div class="websitebackground">
         <img src="assets/backgroundimg.png" alt="background image">
-
 
     </div>
 
@@ -58,7 +67,7 @@
         </div>
     </template>
 
-    <script src="js/pop.js"></script>
+    <script src="js/artistpage.js"></script>
 
 
 </body>

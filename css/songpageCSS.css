@@ -14,6 +14,7 @@ header {
   margin-left: 7vw;
   margin-right: 7vw;
   margin-top: 45px;
+  flex-direction: row-reverse;
 }
 
 header a {
@@ -93,6 +94,8 @@ h1 {
   margin-top: 0.5vw;
 }
 
+
+
 #artistalbumyear {
   grid-area: right2;
   position: relative;
@@ -102,22 +105,36 @@ h1 {
 }
 
 h2 {
-
-  grid-area: right2;
   font-weight: bold;
   font-size: 1.5vw;
+  transition: 0.2s;
+}
+
+#moreimg{
+  height: 2.5vw;
+  transition: 0.2s;
+}
+
+#artistnamelink:hover > h2 {
+  font-size: 1.6vw;
+}
+
+#artistnamelink:hover > #moreimg{
+  height: 2.7vw;
+}
+
+#artistnamelink {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
 }
 
 h3 {
-  grid-area: right2;
   font-weight: normal;
   font-size: 1vw;
   margin-bottom: 0.2vw;
 }
 
-#year {
-  grid-area: right2;
-}
 
 #genre {
   grid-area: right3;
@@ -132,6 +149,11 @@ p {
   font-size: 0.8vw;
 }
 
+#artistnamelink {
+  text-decoration: none;
+  color: white;
+
+}
 
 
 iframe {
@@ -253,7 +275,31 @@ h1 {
 h2 {
   font-size: 2.8vw;
   margin-left: 20px;
+  transition: 0.2s;
 }
+
+
+
+#moreimg{
+  height: 4.5vw;
+  transition: 0.2s;
+}
+
+#artistnamelink:hover > h2 {
+  font-size: 3vw;
+}
+
+#artistnamelink:hover > #moreimg{
+  height: 5vw;
+}
+
+#artistnamelink {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+}
+
+
 
 h3 {
   font-size: 2.8vw;

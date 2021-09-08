@@ -12,15 +12,18 @@
         console.log(song);
 
 
-        document.querySelector("h1").textContent = song.song;
-        document.querySelector("h2").textContent = song.artist;
-        document.querySelector("h3").textContent = song.album;
-        document.querySelector("#year").textContent = song.year;
-        document.querySelector("#genre").textContent = song.genre;
-        document.querySelector("#genre").textContent = song.genre;
+        document.querySelector("h1").textContent = `${song.song}`;
+        document.querySelector("h2").textContent = `${song.artist}`;
+        document.querySelector("h3").textContent = `${song.album}`;
+        document.querySelector("#year").textContent = `${song.year}`;
+        document.querySelector("#genre").textContent = `${song.genre}`;
+    
 
         document.querySelector("#imgtop").src = song.img;
         document.querySelector("#imgblur").src = song.img;
 
         document.querySelector("iframe").src = song.video;
+
+
+        document.querySelector("#artistnamelink").setAttribute("href","artistpage.html?artist=" + song.artist + "&id=" + song._id);
     }
