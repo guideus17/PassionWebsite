@@ -315,16 +315,6 @@ h1 {
   }
   
   
-  header {
-    position: relative;
-    z-index: 12;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    margin-left: 7vw;
-    margin-right: 7vw;
-    margin-top: 20px;
-  }
 
   .songslist {
     margin-top: 50px;
@@ -344,7 +334,7 @@ h1 {
 
 
 .artisttop{
-  margin-top: 100px;
+  margin-top: 150px;
   margin-bottom: 100px;
   margin-left: 7vw;
   margin-right: 7vw;
