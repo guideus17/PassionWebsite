@@ -27,3 +27,24 @@
 
         document.querySelector("#artistnamelink").setAttribute("href","artistpage.html?artist=" + song.artist + "&id=" + song._id);
     }
+
+
+
+    
+
+
+
+document.querySelector("#hamb").addEventListener("click", hambani)
+
+
+
+
+function hambani() {
+
+    console.log("open");
+    document.querySelector("nav").classList.toggle("showup");
+
+    document.querySelector("#one").classList.toggle("oneactive");
+    document.querySelector("#two").classList.toggle("twoactive");
+    document.querySelector("#three").classList.toggle("threeactive");
+}

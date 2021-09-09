@@ -184,9 +184,11 @@ main {
 @media only screen and (max-width: 1125px) {
  
  header {
-  position: absolute;
-  z-index: 10;
+  position: fixed;
+  z-index: 20;
   right: 0;
+  margin-top: 50px;
+  top: 0;
  }
 
   header img {
@@ -199,7 +201,7 @@ main {
   }
 
   main {
-    margin-top: 50px;
+    margin-top: 140px;
     grid-template-columns: repeat(2, minmax(10vw, 1fr));
     margin-left: 7vw;
   margin-right: 7vw;
@@ -214,18 +216,26 @@ main {
     grid-template-rows: repeat(6,1fr);
     margin-left: 0vw;
     margin-right: 0vw;
-    margin-top: 20px;
     position: fixed;
+    top: 0;
     left: -1500px;
     z-index: 17;
-    background-color: #111111;
+    /* background-color: #111111; */
+    backdrop-filter: blur(10px);
     padding: 20px;
-    height: 300px;
+    height: 400px;
     width: 100%;
     padding-left: 7vw;
-    padding-top: 37px;
+    padding-top: 120px;
     transition: 0.2s;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 3px rgb(36, 36, 36);
+    /* outline: 5px dotted green; */
+  }
+
+  nav a {
+align-self: center;
+display: flex;
   }
 
   .showup {
@@ -255,33 +265,16 @@ main {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   label{
     display:flex;
      flex-direction:column;
      width:38px;
      cursor:pointer;
-     position: relative;
+     position: fixed;
      z-index: 25;
      margin-left: 7vw;
-     margin-top: 20px;
+     margin-top: 50px;
+     top: 0;
      
    }
    

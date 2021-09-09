@@ -1,21 +1,22 @@
 /* ---------------------------header / body---------------------------- */
-header img {
-  display: block;
-  width: 72px;
-  position: relative;
-  z-index: 12;
-}
-
 header {
-  position: relative;
-  z-index: 12;
-  display: flex;
-  justify-content: space-between;
-  margin-left: 7vw;
-  margin-right: 7vw;
-  margin-top: 45px;
-  flex-direction: row-reverse;
-}
+  position: fixed;
+  z-index: 20;
+  right: 0;
+  margin-top: 50px;
+  top: 0;
+ 
+ }
+
+  header img {
+    display: block;
+    margin-left: 0vw;
+    margin-right: 7vw;
+    width: 3.3vw;
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+
 
 header a {
   text-decoration: none;
@@ -25,12 +26,118 @@ header a {
   align-self: center;
 }
 
+nav {
+  color: white;
+  font-family: Arial Rounded MT;
+  font-size: 27px;
+  display: grid;
+  justify-content: left;
+  grid-template-rows: repeat(6,1fr);
+  margin-left: 0vw;
+  margin-right: 0vw;
+  position: fixed;
+  top: 0;
+  left: -3000px;
+  z-index: 17;
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  height: 400px;
+  width: 100%;
+  padding-left: 7vw;
+  padding-top: 120px;
+  transition: 0.2s;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 3px rgb(36, 36, 36);
+ 
+}
+nav a {
+  align-self: center;
+  display: flex;
+    }
+
+    
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+.showup {
+  left: 0px;
+}
+.text-reflect:hover {
+  font-size: 28px;
+}
+
+
+
+/* ---------------------------hamburguer menu ---------------------------- */
+
+label{
+  display:flex;
+   flex-direction:column;
+   width:38px;
+   cursor:pointer;
+   position: fixed;
+   z-index: 25;
+   margin-left: 7vw;
+   margin-top: 50px;
+   top: 0;
+   
+ }
+ 
+ label span{
+   background: #fff;
+   border-radius:10px;
+   height:5px;
+   margin: 4px 0;
+   transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+ 
+ }
+ 
+ 
+ span:nth-of-type(1){
+   width:50%;
+   
+ }
+ 
+ span:nth-of-type(2){
+   width:100%;
+ }
+ 
+ 
+ span:nth-of-type(3){
+   width:75%;
+  
+ }
+ 
+ 
+
+ 
+ .oneactive {
+   transform-origin:bottom;
+   transform:rotatez(45deg) translate(8px,0px)
+ }
+ 
+ 
+ .twoactive {
+   
+   transform-origin:top;
+   transform:rotatez(-45deg)
+ }
+ 
+ 
+ .threeactive {
+   
+   transform-origin:bottom;
+   width:50%;
+   transform: translate(11px,-10px) rotatez(45deg);
+ 
+ }
 
 /* ---------------------------grid on the main ---------------------------- */
 
 main {
-
-  margin-top: 100px;
+  margin-top: 250px;
   margin-left: 17vw;
   margin-right: 17vw;
   position: relative;
@@ -205,19 +312,9 @@ iframe:hover {
     z-index: 12;
   }
   
-  header {
-    position: relative;
-    z-index: 12;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    margin-left: 7vw;
-    margin-right: 7vw;
-    margin-top: 20px;
-  }
 
   main {
-    margin-top: 100px;
+    margin-top: 150px;
     margin-bottom: 100px;
     margin-left: 17vw;
     margin-right: 17vw;
