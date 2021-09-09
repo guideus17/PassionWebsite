@@ -26,9 +26,6 @@ fetch(url, options)
         console.error("An error occured:", e.message);
     });
 
-
-
-
 function handData(data) {
    
     data.forEach(showsongs);
@@ -39,14 +36,9 @@ function handData(data) {
 
 function showsongs(song) {
 
-
-
     document.querySelector("#artistphoto").src = `${song.portrait}`;
     document.querySelector("#imgblur").src = `${song.portrait}`;
     document.querySelector("h3").textContent = `${song.artist}`;
-
-
-
 
     // grab template and cloone it
     const templateSelection = document.querySelector(".allsongs").content;
@@ -54,7 +46,6 @@ function showsongs(song) {
 
 
     // change content
-
     cloneOfTemplate.querySelector("h1").textContent = `${song.song}`;
     cloneOfTemplate.querySelector(".songcoverimg").src = `${song.img}`;
     cloneOfTemplate.querySelector("h2").textContent = `${song.artist}`;
@@ -63,22 +54,14 @@ function showsongs(song) {
 
     cloneOfTemplate.querySelector("a").setAttribute("href", "songpage.html?song=" + song._id);
 
-
-
     // put clone in the place
     const GridWithsongs = document.querySelector(".songslist");
     GridWithsongs.appendChild(cloneOfTemplate);
 
-
 };
 
 
-
-
 document.querySelector("#hamb").addEventListener("click", hambani)
-
-
-
 
 function hambani() {
 
